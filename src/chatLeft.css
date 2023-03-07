@@ -5,8 +5,7 @@
     margin: 7px 0px;
     display: grid;
     grid-template-columns: 20px 5px auto ;
-    grid-template-areas: "element--img . element--txt";  
-    overflow:hidden;
+    grid-template-areas: "element--img . element--txt"; 
 }
 
 .Chat--element--left--txt{
