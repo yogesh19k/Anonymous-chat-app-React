@@ -1,0 +1,91 @@
+
+.Chat--outerFrame{
+    overflow:hidden ;
+    background-color: #BFACE2;
+    min-width: 200px;
+    max-width: 350px;
+    min-height: 100vh;
+    -webkit-box-shadow: 4px 5px 20px -5px rgba(0,0,0,0.61);
+    -moz-box-shadow: 4px 5px 20px -5px rgba(0,0,0,0.61);
+    box-shadow: 4px 5px 20px -5px rgba(0,0,0,0.61);
+    border-radius: 10px;
+    margin: auto;
+    display: grid;
+    grid-template-rows: 60px calc(100vh - 120px) 60px;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "chat-header"
+    "."
+    ".";
+}
+
+.chat--header{
+    grid-area: chat-header;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color:#655DBB;
+    /* height: 100px; */
+    /* border: 5px solid beige; */
+}
+
+.chat--profilePic{
+    margin-left: 20px;
+    margin-right: 10px;
+    overflow: hidden;
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    padding: 1px ;
+    background-color:#ECF2FF ;
+}
+
+.chat--userName{
+    color: #ECF2FF;
+    font-size: 1.2rem;
+    
+}
+
+
+.chat--userNameEdit{
+    width: 10px;
+    margin-left: 3px;
+    margin-top: 2px;
+    color: #ECF2FF;
+}
+
+
+.chat--footer{
+    height: 100%;
+    width: 100%;
+    padding: 0px 4%;
+    background-color:#655DBB;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.chat--postContent{
+    height: 40px;
+    width:100%;
+    margin-right: 4%;
+    resize: none;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 15px;
+    font-size: 1.2rem;
+}
+
+.chat--postContent::-webkit-scrollbar {
+    display: none;
+}
+
+.chat--postContent:focus{
+    border: none;
+    outline: none;
+}
+
+.chat--sendButton{
+    color: #ECF2FF;
+    font-size: 1.8rem;
+}

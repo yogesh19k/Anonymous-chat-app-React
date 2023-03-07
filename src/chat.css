@@ -1,0 +1,11 @@
+.Chat--group{
+    overflow-y:scroll;
+    overflow-x: hidden;
+    display: flex;
+    height: 100%;
+    max-width: inherit;
+    flex-direction: column;
+    padding: 7px 10px;
+}
+
+
