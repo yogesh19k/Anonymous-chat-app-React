@@ -20,7 +20,6 @@ export default function Chat(props){
         loadData()
         const interval=setInterval(loadData,1000)
         return(()=>{
-            console.log("useEffect cleanup function called")
             clearInterval(interval)
         })
     },[])
