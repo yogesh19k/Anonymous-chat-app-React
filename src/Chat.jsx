@@ -10,10 +10,10 @@ export default function Chat(props){
     function loadData(){
         fetch('/api')
         .then(res => res.json())
-        .then(data => {
-            setChat(data);
+        .then(data =>{
+            setChat(oldData => oldData.length < data.length ? data :oldData)
         })
-        
+
     }
 
     useEffect(()=>{
