@@ -33,9 +33,7 @@ export default function ChatWindow(props){
             content:content
         })
     }
-
-
-    console.log("Reload - ChatWindow")
+    
     return(
         <div className="Chat--outerFrame">
             <header className="chat--header">

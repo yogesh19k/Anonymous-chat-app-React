@@ -4,11 +4,10 @@ import ChatLeft from "./ChatLeft";
 import "./chat.css";
 
 export default function Chat(props){
-
+    const bottomRef = React.useRef(null);
     const [chats,setChat]=React.useState([])
 
     function loadData(){
-        console.log("data Requested")
         fetch('/api')
         .then(res => res.json())
         .then(data => {
@@ -18,7 +17,6 @@ export default function Chat(props){
     }
 
     useEffect(()=>{
-        console.log("useEffect called")
         loadData()
         const interval=setInterval(loadData,1000)
         return(()=>{
@@ -26,6 +24,10 @@ export default function Chat(props){
             clearInterval(interval)
         })
     },[])
+
+    useEffect(() => {
+        bottomRef.current?.scrollIntoView({behavior: 'smooth'});
+    }, [chats]);
 
     const chatElements = chats.map(chat => props.yourChatIds.includes(chat.id) ? 
         <ChatRight
@@ -54,6 +56,7 @@ export default function Chat(props){
     return(
         <main className="Chat--group">
             {chatElements}
+        <div ref={bottomRef} />
         </main>
     )
 }
